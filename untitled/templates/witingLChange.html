@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>patients Information</title>
+    <style>
+        body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 60px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#">KELLY'S HOSPITAL</a>
+</div>
+<form action="/witingLChange" method=”POST” >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table border="1"; style="margin-left: 10px">
+<th>Serial Number</th>
+<th>ID</th>
+    {% for item in data %}
+    <tr>
+        <td>{{ item[0] }}</td>
+        <td>{{ item[1] }}</td><br>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+
+<br>
+<br>
+<form action="/commit" >
+     <button class="button" type="submit"; style="margin-left: 50px">COMMIT</button>
+</form>
+<br>
+<br>
+<br>
+<form action="/autocommit" >
+     <button class="button" type="submit"; style="margin-left: 50px">AUTOCOMMIT</button>
+</form>
+
+<form action="/insertP">
+    <p style="margin-left: 170px; font-size: 25px;font-family: 'Arial Rounded MT Bold'">Insert Patient:</p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="text" name="IDi"></p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="submit" value="INSERT"></p>
+    <br>
+</form>
+
+<form action="/UpdateP">
+    <p style="margin-left: 170px; font-size: 25px;font-family: 'Arial Rounded MT Bold'">Update Patient:</p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="text" name="IDu">ID</p>
+     <p style="margin-left: 170px;font-size: 25px;"><input type="text" name="SEQ">Sequence Number</p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="submit" value="UPDATE"></p>
+    <br>
+</form>
+
+<form action="/deleteP">
+    <p style="margin-left: 170px; font-size: 25px;font-family: 'Arial Rounded MT Bold'">Delete Patient:</p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="text" name="IDd">ID</p>
+    <p style="margin-left: 170px;font-size: 25px;"><input type="submit" value="DELETE"></p>
+    <br>
+</form>
+
+<form action="/rollback">
+    <p style="margin-left: 170px;font-size: 25px;"><input type="submit" value="ROLLBACK"></p>
+</form>
+
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>

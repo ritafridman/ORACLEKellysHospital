@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>patients Information</title>
+    <style>
+        body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 60px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#">KELLY'S HOSPITAL</a>
+</div>
+<h1 style="padding-top:90px; font-size: 30px">patients Information</h1>
+
+<div>
+    <form action="/departmentStuff" method=”POST” style="display: flex">
+    <br>
+    <br>
+    <table border="1"; style="margin-left: 10px">
+    <th>ID</th>
+    <th>Role code</th>
+    <th>Departments Code</th>
+    <th>Serial Number</th><br>
+
+        {% for item in data %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td><br>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+    <br>
+    <br>
+    <br>
+</div>
+</body>
+</html>

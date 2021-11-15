@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 60px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#kell'sHospital">KELLY'S HOSPITAL</a>
+</div>
+<div style="direction: ltr!important; display: inline-block">
+    <div style="display: inline-block">
+            <br></br>
+            <br></br>
+            <br></br>
+        <form action="/patientsAndDoctors" method=”POST”>
+            <button  class="button" type="submit"; style="margin-left: 50px">show patients & doctors</button>
+
+        </form>
+
+        <br>
+        <br>
+        <form action="/patDocDes" method=”POST”>
+            <button class="button" type="submit"; style="margin-left: 50px">Show Patient & Doctor & Disease</button>
+        </form>
+
+        <br>
+        <br>
+        <form action="/patientsAndDiagnosis" method=”POST”>
+            <button class="button" type="submit"; style="margin-left: 50px">show patients & diagnosis</button>
+        </form>
+
+        <br>
+        <br>
+        <form action="/patientsduring3Month">
+            <p class="button" type="submit"; style="margin-left: 50px; font-size: 20px; font-weight: bold;">Please insert duration in days to view registered patients</p>
+            <p style="margin-left: 50px; font-size: 13px;font-family: 'Arial Rounded MT Bold'">range:</p>
+            <p style="margin-left: 50px;font-size: 25px;"><input type="text" name="range"></p>
+            <p style="margin-left: 50px;font-size: 25px;"><input type="submit" value="Submit"></p>
+        </form>
+    </div>
+    <br>
+    <br>
+    <form action="/patientDesc" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Patients By Last Name Descending</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/patientAsc" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Patients By Last Name Ascending</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/employeeDesc" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Employees By Last Name Descending</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/employeeAsc" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Employees By Last Name Ascending</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/departmentStuff" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Stuff ordered by departments</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/diseasesStatus" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Diseases status</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/medicationbasket" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Medication Basket</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/notUsedMedicatons" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Show Not Used Medications</button>
+    </form>
+
+    <br>
+    <br>
+    <form action="/findPatient" method=”POST”>
+        <p class="button" type="submit"; style="margin-left: 50px; font-size: 20px; font-weight: bold;">Find Patients Last Name By ID</p>
+        <p style="margin-left: 50px; font-size: 15px;font-family: 'Arial Rounded MT Bold'">ID:</p>
+        <p style="margin-left: 50px;font-size: 25px;"><input type="text" name="ID"></p>
+        <p style="margin-left: 50px;font-size: 25px;"><input type="submit" value="Submit"></p>
+    </form>
+
+    <br>
+    <form action="/sumTotEmp" method=”POST”>
+        <p class="button" type="submit"; style="margin-left: 50px; font-size: 20px; font-weight: bold;">Find Total staff by department code</p>
+        <p style="margin-left: 50px; font-size: 15px;font-family: 'Arial Rounded MT Bold'">Department Code:</p>
+        <p style="margin-left: 50px;font-size: 25px;"><input type="text" name="depCode"></p>
+        <p style="margin-left: 50px;font-size: 25px;"><input type="submit" value="Submit"></p>
+    </form>
+
+    <br>
+    <form action="/witingLChange" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Manage Waiting List</button>
+    </form>
+
+    <br>
+    <form action="/bloodeTeststat" method=”POST”>
+        <button class="button" type="submit"; style="margin-left: 50px">Check Blood Tesk Status</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+</div>
+</body>
+</html>
